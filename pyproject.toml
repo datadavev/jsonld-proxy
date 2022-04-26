@@ -12,6 +12,7 @@ fastapi = "^0.75.2"
 requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
+uvicorn = "^0.17.6"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
