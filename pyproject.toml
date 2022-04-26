@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "jsonld-proxy"
+version = "0.1.0"
+description = "Present JSON-LD given a source URL"
+authors = ["datadavev <605409+datadavev@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyld = {git = "https://github.com/datadavev/pyld.git"}
+fastapi = "^0.75.2"
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
