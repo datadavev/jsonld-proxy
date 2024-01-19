@@ -1,5 +1,4 @@
 pydantic
-starlette==0.17.1
 fastapi
 requests
 pyld @ git+https://github.com/datadavev/pyld.git@master

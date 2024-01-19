@@ -8,8 +8,8 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.9"
 pyld = {git = "https://github.com/datadavev/pyld.git"}
-fastapi = "^0.75.2"
-requests = "^2.27.1"
+requests = "^2.31.0"
+fastapi = "^0.109.0"
 
 [tool.poetry.dev-dependencies]
 uvicorn = "^0.17.6"
