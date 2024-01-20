@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "jsonld-proxy"
-version = "0.1.0"
+version = "1.0.0"
 description = "Present JSON-LD given a source URL"
 authors = ["datadavev <605409+datadavev@users.noreply.github.com>"]
 license = "MIT"
@@ -13,6 +13,8 @@ fastapi = "^0.109.0"
 
 [tool.poetry.dev-dependencies]
 uvicorn = "^0.17.6"
+
+[tool.poetry_bumpversion.file."jldp/__init__.py"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
