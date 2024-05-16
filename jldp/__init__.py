@@ -10,7 +10,7 @@ import urllib.parse
 import pyld.jsonld
 import requests
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "datadavev"
 
 TIMEOUT_SECS = 8.0
