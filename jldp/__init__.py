@@ -67,13 +67,18 @@ def do_extract_jsonld(
                 error=str(e),
                 jld=jld
             )
+    message = ""
     try:
         options = {}
         content_type = response.headers.get("Content-Type", "text/html")
-        if "ld+json" in content_type:
+        try:
             jld = response.json()
-        else:
+            message = "Loaded from JSON response."
+            if not "ld+json" in content_type:
+                message = "JSON response but not application/ld+json"
+        except Exception as e:
             jld = pyld.jsonld.load_html(response.content, response.url, None, options)
+            message = "Loaded from HTML response."
     except Exception as e:
         return JldpResponse(
             message="JSON-LD extraction from retrieved content failed.",
@@ -84,7 +89,7 @@ def do_extract_jsonld(
             jld=jld
         )
     return JldpResponse(
-        message="OK",
+        message=f" OK. {message}",
         status=response.status_code,
         request_url=source_url,
         final_url=response.url,
